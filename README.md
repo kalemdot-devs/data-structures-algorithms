@@ -21,8 +21,8 @@ My goal is to prepare for interviews, and also to **build a strong logical minds
 
 ## 🧭 Learning Roadmap  
 
-| Phase | Topic | Key Concepts | Status |
-|--------|--------|---------------|--------|
+  | Topic | Key Concepts | Status |
+  |--------|---------------|--------|
   Java Basics | Syntax, Variables, Data Types, Input/Output | ✅ Completed |
   Control Statements | If-Else, Switch, Loops (for, while, do-while) | 🔄 In Progress |
   Functions & Methods | Method Overloading, Return Types | ⏳ Pending |
