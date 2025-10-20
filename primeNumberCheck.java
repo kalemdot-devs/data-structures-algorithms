@@ -4,6 +4,8 @@ public class primeNumberCheck {
 
 
     // define a function to check prime or not
+    
+
     public static void checkPrime(int n) {
         boolean checkPrime = true;
 
