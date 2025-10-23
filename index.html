@@ -1,0 +1,73 @@
+
+4:19 PM
+SAMPLE_HTML = """
+<section class="category" data-name="Gadgets">
+  <article class="product" data-sku="A-100"
+           data-meta="sku:A-100|batch=202406|lot=17">
+    <header>
+      <h2>  Smart Sensor 2000 </h2>
+      <span class="badge">Best seller</span>
+    </header>
+    <div class="pricing">
+      <span class="price primary">$129.99</span>
+      <span class="price sale"> $99.49 </span>
+    </div>
+    <footer>
+      <time class="updated" datetime="2024-06-02T11:45:00Z">Updated: 2 Jun 2024</time>
+      <span class="rating" data-max="5">Rated 4.6 out of 5 (321 reviews)</span>
+    </footer>
+    <!-- inv:AZ-991-202406 -->
+  </article>
+
+  <article class="product" data-sku="A-101"
+           data-meta="sku:A-101|batch=202405|lot=09">
+    <header>
+      <h2>Noise-Cancelling Headphones</h2>
+    </header>
+    <div class="pricing">
+      <span class="price primary">USD 210.00</span>
+    </div>
+    <footer>
+      <time class="updated">June 1, 2024 09:15 UTC</time>
+      <span class="rating" data-max="5">Rating: 4.2</span>
+    </footer>
+  </article>
+</section>
+
+<section class="category" data-name="Clearance">
+  <article class="product" data-sku="A-100"
+           data-meta="sku:A-100|batch=202405|lot=05">
+    <header>
+      <h2>Smart Sensor 2000</h2>
+    </header>
+    <div class="pricing">
+      <span class="price primary">$119.99</span>
+    </div>
+    <footer>
+      <time class="updated" datetime="2024/06/01 08:00:00+00:00">June 01 08:00 UTC</time>
+      <span class="rating" data-max="5">N/A</span>
+    </footer>
+    <!-- inv:AZ-880-202405 -->
+  </article>
+
+  <div class="ad-unit">Sponsored</div>
+
+  <article class="product" data-sku="">
+    <header><h2>Missing SKU</h2></header>
+  </article>
+</section>
+""
+
+Required Fields per Product
+sku – string.
+name – string (trimmed).
+category – string from enclosing <section data-name="...">.
+price – float (from .price.primary).
+sale_price – float or None (from .price.sale).
+rating – float or None.
+updated – timezone-aware datetime in UTC.
+batch – string extracted via regex from data-meta (batch=YYYYMM).
+lot – string extracted via regex from data-meta (lot=NN).
+inventory_code – string extracted via regex from HTML comments (<!-- inv:CODE -->).
+
+Python Developer Interview
