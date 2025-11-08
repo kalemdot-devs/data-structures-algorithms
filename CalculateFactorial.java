@@ -1,13 +1,18 @@
 public class CalculateFactorial {
-    public static void main(String[] args) {
-        int n = 6;
+
+    public static int factorial(int num) {
         int fact = 1;
-        
-        for(int i=1; i<(n+1); i++) {
+
+        for(int i=1; i<=num; i++) {
             fact = fact * i;
         }
-        System.out.println(fact);
-    
+        
+        return fact;
+    }
+
+    public static void main(String[] args) {
+        int fact = factorial(7);
+        System.out.println("Factorial of a number : " + fact);
     }
     
 }
