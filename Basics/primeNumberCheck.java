@@ -12,14 +12,12 @@ public class primeNumberCheck {
             System.out.println("The number " + n + " is prime");
             return;
         }
-
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {
                 System.out.println("The number " + n + " is not prime");
                 return;
             }
         }
-
         System.out.println("The number " + n + " is prime");
     }
 

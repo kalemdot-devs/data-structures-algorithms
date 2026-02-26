@@ -6,28 +6,19 @@ public class BinarySearch {
         // let's first initialize start and end vlaue in array
         int start = 0;
         int end = numbers.length - 1;
-        
         while (start <= end) {
             int mid = (start + end) / 2;
             // System.out.println("mid value of the given array is : " + mid);
-
             if(numbers[mid] == key) {
                 return mid;
             }
-            
             if(numbers[mid] < key){
                 start = mid + 1;
             }
-            
-            // else {
-            //     start = mid + 1;
-            // }
             else {
                 end = mid - 1;
             }
-            
         }
-        
         return -1;
     }
 
@@ -40,7 +31,6 @@ public class BinarySearch {
         } else{
             System.err.println("key found at index : " + index);
         }
-
 
     }
 }
